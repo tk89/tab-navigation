@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+.tab-nav-container {
+    background-color: #fff;
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    width: 500px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tab {
+    background-color: #ffffff;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    margin: 0 10px;
+    transition: background 0.4s linear;
+    color: #C0C0C0;
+}
+
+.tab i {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.tab p {
+    font-weight: bold;
+    overflow: hidden;
+    max-width: 0;
+    font-family: 'Raleway';   
+}
+
+.tab.active p {
+    margin-left: 10px;
+    max-width: 200px;
+    transition: max-width 0.4s linear;
+}
+
+.tab.active.blue {
+    background-color: #d5e7fe;
+    color: #28518a;
+}
+
+.tab.active.pink {
+    background-color: rgba(201, 55, 157, 0.2);
+    color: #e00543;
+}
+
+.tab.active.yellow {
+    background-color: rgba(230, 169, 25, 0.2);
+    color: rgba(230, 169, 25, 1);
+}
+
+.tab.active.teal {
+    background-color: rgba(28, 150, 162, 0.2);
+    color: rgba(28, 150, 162, 1);
+}
+
+@media (max-width: 450px) {
+    .tab-nav-container {
+        padding: 20px;
+        width: 350px;
+    }
+
+    .tab {
+        padding: 0 10px;
+        margin: 0;
+    }
+
+    .tab i {
+        font-size: 1em;
+    }
+}
